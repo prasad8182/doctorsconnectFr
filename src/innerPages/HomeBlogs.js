@@ -7,7 +7,7 @@ const HomeBlogs = () => {
   const data = useFetchData('https://doctorsconnect.onrender.com/blogupload');
 
   // Take only first 4 blogs
-  const limitedBlogs = data.slice(0, 4);
+  const limitedBlogs = Array.isArray(data) ? data.slice(0, 4) : [];
 
   return (
     <section className="container my-5">
