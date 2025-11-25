@@ -12,7 +12,7 @@ const DeleteTreatments = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:4000/uploads')
+      .get('https://doctorsconnect.onrender.com/uploads')
       .then((res) => setData(res.data))
       .catch((err) => console.error('Error fetching treatments:', err));
 
@@ -30,7 +30,7 @@ const DeleteTreatments = () => {
   const handleDelete = (id) => {
     if (window.confirm('Are you sure you want to delete this treatment?')) {
       axios
-        .delete(`http://localhost:4000/uploads/${id}`)
+        .delete(`https://doctorsconnect.onrender.com/uploads/${id}`)
         .then((res) => {
           alert(res.data.message);
           setData(data.filter((item) => item._id !== id));
@@ -62,7 +62,7 @@ const DeleteTreatments = () => {
                       <tr key={treat._id}>
                         <td>
                           <img
-                            src={`http://localhost:4000/uploads/${treat.path}`}
+                            src={`https://doctorsconnect.onrender.com/uploads/${treat.path}`}
                             alt={treat.tname}
                             width="100"
                             height="80"

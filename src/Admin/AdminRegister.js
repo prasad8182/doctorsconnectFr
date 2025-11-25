@@ -43,7 +43,7 @@ const AdminRegister = () => {
     
     if(!validateForm()) return
 
-    axios.post(`http://localhost:4000/register`, data)
+    axios.post(`https://doctorsconnect.onrender.com/register`, data)
       .then((res) => {
         alert(res.data.message)
         navigate('/adminlogin')

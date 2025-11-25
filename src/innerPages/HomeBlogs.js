@@ -4,7 +4,7 @@ import useFetchData from '../hooks/useFetchData';
 
 const HomeBlogs = () => {
   // Fetch all blogs
-  const data = useFetchData('http://localhost:4000/blogupload');
+  const data = useFetchData('https://doctorsconnect.onrender.com/blogupload');
 
   // Take only first 4 blogs
   const limitedBlogs = data.slice(0, 4);
@@ -19,7 +19,7 @@ const HomeBlogs = () => {
             <div key={index} className="col-md-6 col-lg-3 mb-4">
               <div className="card shadow-sm border-0 h-100">
                 <img
-                  src={`http://localhost:4000${blog.path}`}
+                  src={`https://doctorsconnect.onrender.com${blog.path}`}
                   alt={blog.title}
                   className="card-img-top"
                   style={{

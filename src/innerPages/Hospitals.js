@@ -3,7 +3,7 @@ import useFetchData from '../hooks/useFetchData';
 import styles from './innerstyles.module.css';
 
 const Hospitals = () => {
-  const data = useFetchData(`http://localhost:4000/hospital`);
+  const data = useFetchData(`https://doctorsconnect.onrender.com/hospital`);
 
   return (
     <main className={styles.hospitalMain}>
@@ -17,7 +17,7 @@ const Hospitals = () => {
               <div className={styles.hospitalCard}>
                 <div className={styles.imageWrapper}>
                   <img
-                    src={`http://localhost:4000${hos.path}`}
+                    src={`https://doctorsconnect.onrender.com${hos.path}`}
                     alt={hos.catname}
                     className="img-fluid"
                   />

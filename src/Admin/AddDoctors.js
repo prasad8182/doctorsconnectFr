@@ -20,7 +20,7 @@ const AddDoctors = () => {
       setError(' Please fill in all fields before submitting.')
       return
     }
-    axios.post(`http://localhost:4000/doctor`, doctor)
+    axios.post(`https://doctorsconnect.onrender.com/doctor`, doctor)
       .then((res) => {
         if (res.data.status === 'success') {
           alert(res.data.message)

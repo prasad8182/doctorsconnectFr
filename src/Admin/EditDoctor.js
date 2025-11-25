@@ -22,7 +22,7 @@ const EditDoctor = () => {
 
   // ✅ Fetch doctor details
   useEffect(() => {
-  axios.get(`http://localhost:4000/doctor/${id}`)
+  axios.get(`https://doctorsconnect.onrender.com/doctor/${id}`)
     .then((res) => {
       const doc = res.data?.doctor || res.data; // ✅ handle both
       if (doc && doc._id) {
@@ -45,7 +45,7 @@ const EditDoctor = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     setError('');
-    axios.put(`http://localhost:4000/doctor/${id}`, doctor)
+    axios.put(`https://doctorsconnect.onrender.com/doctor/${id}`, doctor)
       .then((res) => {
         alert(res.data.message);
         navigate('/admindashboard/deletedoctor');

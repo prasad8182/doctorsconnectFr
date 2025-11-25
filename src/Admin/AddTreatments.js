@@ -24,7 +24,7 @@ const AddTreatments = () => {
     formdata.append('image', image);
     formdata.append('tname', tname);
 
-    axios.post(`http://localhost:4000/uploads`, formdata)
+    axios.post(`https://doctorsconnect.onrender.com/uploads`, formdata)
       .then((res) => {
         if (res.data.status === "failed") {
           setError(res.data.message);

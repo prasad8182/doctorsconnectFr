@@ -21,7 +21,7 @@ const BookAppointment = () => {
     const submitHandler = (e) =>{
         e.preventDefault()
 
-        axios.post(`http://localhost:4000/bookings`,data)
+        axios.post(`https://doctorsconnect.onrender.com/bookings`,data)
         .then((res)=>{
             if(res.data.status === 'success'){
                 alert(res.data.message)

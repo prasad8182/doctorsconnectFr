@@ -11,7 +11,7 @@ const DeleteLocations = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:4000/location')
+      .get('https://doctorsconnect.onrender.com/location')
       .then((res) => setData(res.data))
       .catch((err) => console.error('Error fetching treatments:', err));
 
@@ -29,7 +29,7 @@ const DeleteLocations = () => {
   const handleDelete = (id) => {
     if (window.confirm('Are you sure you want to delete this treatment?')) {
       axios
-        .delete(`http://localhost:4000/location/${id}`)
+        .delete(`https://doctorsconnect.onrender.com/location/${id}`)
         .then((res) => {
           alert(res.data.message);
           setData(data.filter((item) => item._id !== id));

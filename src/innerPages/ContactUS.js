@@ -11,7 +11,7 @@ const ContactUS = () => {
 
   const submitHandler=(e)=>{
     e.preventDefault()
-    axios.post(`http://localhost:4000/contactus`,data)
+    axios.post(`https://doctorsconnect.onrender.com/contactus`,data)
     .then((res)=>{
       alert(res.data.message)
       setData({ name: '', email: '', phone: '', subject: '', message: '' })

@@ -12,7 +12,7 @@ const EditTreatment = () => {
     const [error, setError] = useState('');
 
     useEffect(() => {
-        axios.get(`http://localhost:4000/uploads/${id}`)
+        axios.get(`https://doctorsconnect.onrender.com/uploads/${id}`)
             .then((res) => {
                 setTname(res.data.tname);
             })
@@ -27,7 +27,7 @@ const EditTreatment = () => {
         formData.append('tname', tname);
         if (image) formData.append('image', image);
 
-        axios.put(`http://localhost:4000/uploads/${id}`, formData)
+        axios.put(`https://doctorsconnect.onrender.com/uploads/${id}`, formData)
             .then((res) => {
                 alert(res.data.message);
                 navigate('/admindashboard/deletetreatment'); // redirect after update

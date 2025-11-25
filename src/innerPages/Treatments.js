@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import useFetchData from '../hooks/useFetchData';
 
 const Treatments = () => {
-  const data = useFetchData(`http://localhost:4000/uploads`);
+  const data = useFetchData(`https://doctorsconnect.onrender.com/uploads`);
 
   return (
     <main>
@@ -18,7 +18,7 @@ const Treatments = () => {
                   <div className={styles.treatInner}>
                     <div className={styles.treatImg}>
                       <img
-                        src={`http://localhost:4000/uploads/${treat.filename}`}
+                        src={`https://doctorsconnect.onrender.com/uploads/${treat.filename}`}
                         alt={treat.tname}
                         className='img-fluid'
                       />

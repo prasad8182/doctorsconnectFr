@@ -34,7 +34,7 @@ const AddBlogs = () => {
         formData.append('description', data.description)
         formData.append('content', data.content)
 
-        axios.post('http://localhost:4000/blogupload', formData)
+        axios.post('https://doctorsconnect.onrender.com/blogupload', formData)
             .then(res => {
                 alert(res.data.message)
                 if (res.data.status === 'success') {

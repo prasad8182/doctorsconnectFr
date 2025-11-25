@@ -33,7 +33,7 @@ const AdminLogin = () => {
 
         if (!validForm()) return
 
-        axios.post(`http://localhost:4000/login`, data)
+        axios.post(`https://doctorsconnect.onrender.com/login`, data)
             .then((res) => {
                 if (res.data.message === "User not Found") {
                     setError(res.data.message)

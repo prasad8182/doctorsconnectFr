@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 const DeleteDoctors = () => {
   const [data, setData] = useState([])
   useEffect(() => {
-    axios.get(`http://localhost:4000/doctor`)
+    axios.get(`https://doctorsconnect.onrender.com/doctor`)
       .then((res) => {
         setData(res.data)
       })
@@ -27,7 +27,7 @@ const DeleteDoctors = () => {
   }, [])
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:4000/doctor/${id}`)
+    axios.delete(`https://doctorsconnect.onrender.com/doctor/${id}`)
       .then((res) => {
         alert(res.data.message)
         setData(data.filter((item) => item._id !== id))

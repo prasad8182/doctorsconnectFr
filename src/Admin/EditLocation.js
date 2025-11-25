@@ -10,7 +10,7 @@ const EditLocation = () => {
     const [error, setError] = useState('');
 
     useEffect(() => {
-        axios.get(`http://localhost:4000/location/${id}`)
+        axios.get(`https://doctorsconnect.onrender.com/location/${id}`)
             .then((res) => {
                 setData({ tname: res.data.tname, location: res.data.location });
             })
@@ -26,7 +26,7 @@ const EditLocation = () => {
         e.preventDefault();
         setError('');
 
-        axios.put(`http://localhost:4000/location/${id}`, data)
+        axios.put(`https://doctorsconnect.onrender.com/location/${id}`, data)
             .then((res) => {
                 alert(res.data.message);
                 navigate('/admindashboard/deletelocation');

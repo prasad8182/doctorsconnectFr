@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom'
 
 const Doctors = () => {
   const { tname, location } = useParams()
-  const data = useFetchData(`http://localhost:4000/doctor/${tname}/${location}`)
+  const data = useFetchData(`https://doctorsconnect.onrender.com/doctor/${tname}/${location}`)
 
 
   return (

@@ -21,7 +21,7 @@ const AddLocations = () => {
       setError("Please Fill all the fields")
       return
     }
-    axios.get(`http://localhost:4000/locationname/${tname}`)
+    axios.get(`https://doctorsconnect.onrender.com/locationname/${tname}`)
       .then((res) => {
         const exists = res.data.some((loc) =>
           loc.location.trim().toLowerCase() === location.toLowerCase()
@@ -30,7 +30,7 @@ const AddLocations = () => {
           setError('This location already exists for the selected treatment.')
         }
         else {
-          axios.post(`http://localhost:4000/location`, data)
+          axios.post(`https://doctorsconnect.onrender.com/location`, data)
             .then((res) => {
               if (res.data.status === "success") {
                 alert(res.data.message)

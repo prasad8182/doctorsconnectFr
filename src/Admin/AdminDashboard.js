@@ -11,7 +11,7 @@ const AdminDashboard = () => {
     const [data, setData] = useState('')
     const navigate = useNavigate()
     useEffect(() => {
-        axios.get(`http://localhost:4000/admindashboard`,{
+        axios.get(`https://doctorsconnect.onrender.com/admindashboard`,{
             headers: {
                 "x-token": token,
             }

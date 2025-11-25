@@ -4,7 +4,7 @@ import useFetchData from '../hooks/useFetchData';
 
 const BlogAlone = () => {
   const { title } = useParams();
-  const blog = useFetchData(`http://localhost:4000/blogupload/${title}`);
+  const blog = useFetchData(`https://doctorsconnect.onrender.com/blogupload/${title}`);
 
   return (
     <main>
@@ -17,7 +17,7 @@ const BlogAlone = () => {
               {blog && blog.data ? (
                 <div className='card border-0 shadow-sm p-4'>
                   <img
-                    src={`http://localhost:4000${blog.data.path}`}
+                    src={`https://doctorsconnect.onrender.com${blog.data.path}`}
                     alt={blog.data.title}
                     className='img-fluid rounded mb-3'
                     style={{ height: '400px', objectFit: 'cover' }}

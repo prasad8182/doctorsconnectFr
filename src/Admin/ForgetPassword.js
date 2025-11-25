@@ -12,7 +12,7 @@ const ForgetPassword = () => {
 
     const sendMail = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:4000/sendotp', data)
+        axios.post('https://doctorsconnect.onrender.com/sendotp', data)
             .then((res) => {
                 if (res.data.status === 'success') {
                     alert('OTP sent successfully!');
@@ -29,7 +29,7 @@ const ForgetPassword = () => {
 
     const verifyOtp = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:4000/verifyotp', {
+        axios.post('https://doctorsconnect.onrender.com/verifyotp', {
             email: data.email,
             otp: otp
         })

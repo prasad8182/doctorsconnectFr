@@ -22,7 +22,7 @@ const ResetPassword = () => {
             alert(`Password Do not Match`)
         }
 
-        axios.post(`http://localhost:4000/resetpassword`, {email:email,password:data.password})
+        axios.post(`https://doctorsconnect.onrender.com/resetpassword`, {email:email,password:data.password})
         .then((res)=>{
             if(res.data.status === 'success'){
                 alert(`Password Updated SuccesFully`)

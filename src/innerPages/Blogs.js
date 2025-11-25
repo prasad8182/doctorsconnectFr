@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 
 const Blogs = () => {
 
-  const data = useFetchData('http://localhost:4000/blogupload')
+  const data = useFetchData('https://doctorsconnect.onrender.com/blogupload')
 
   return (
     <main>
@@ -24,7 +24,7 @@ const Blogs = () => {
                           {/* 🖼️ Blog Image */}
                           <div className='col-md-3'>
                             <img
-                              src={`http://localhost:4000${blog.path}`}
+                              src={`https://doctorsconnect.onrender.com${blog.path}`}
                               alt={blog.title}
                               className='img-fluid rounded'
                               style={{

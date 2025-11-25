@@ -16,7 +16,7 @@ const AssociatedHospitals = () => {
     }
     formdata.append("image",image)
     formdata.append("catname",catname)
-    axios.post(`http://localhost:4000/hospital`,formdata)
+    axios.post(`https://doctorsconnect.onrender.com/hospital`,formdata)
     .then((res)=>{
       alert(`Product Added Successfully`)
     })

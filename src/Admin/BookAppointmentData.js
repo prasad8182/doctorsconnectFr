@@ -8,7 +8,7 @@ const BookAppointmentData = () => {
   const [data, setData] = useState([])
 
   useEffect(() => {
-    axios.get(`http://localhost:4000/bookings`)
+    axios.get(`https://doctorsconnect.onrender.com/bookings`)
       .then((res) => {
         setData(res.data)
       })
@@ -27,7 +27,7 @@ const BookAppointmentData = () => {
   }, [])
 
   const deleteOneRecord = (bid) => {
-    axios.delete(`http://localhost:4000/bookings/${bid}`)
+    axios.delete(`https://doctorsconnect.onrender.com/bookings/${bid}`)
       .then((res) => {
         if(res.data.status === 'success'){
           alert(res.data.message)
