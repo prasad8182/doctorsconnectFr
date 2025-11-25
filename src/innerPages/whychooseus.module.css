@@ -1,0 +1,175 @@
+.whychoose h2 {
+    font-weight: 500;
+    text-align: center;
+    color: rgb(11, 11, 68);
+}
+
+.whychoose h2 span {
+    color: rgb(241, 11, 11);
+}
+
+.whychooseus {
+    background: linear-gradient(to bottom, rgba(9, 17, 79, 0.802), rgba(122, 238, 251, 0.9));
+    padding: 60px 0;
+    color: #fff;
+}
+
+.tank {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align: center;
+    align-items: flex-start;
+    margin-top: 60px;
+    padding-top: 50px;
+}
+
+.tank::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 5%;
+    right: 5%;
+    border-top: 1px dashed rgb(73, 14, 110);
+    z-index: 1;
+}
+
+.boxs {
+    position: relative;
+    z-index: 1000;
+    width: 22%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background: linear-gradient(to bottom, #2166de, #ccd5e9);
+    padding: 40px 20px 30px;
+    border-radius: 10px;
+    color: #0c063d;
+}
+
+.boxs:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.circle {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f5f1fc;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #14092f;
+    z-index: 3;
+}
+
+.triangle {
+    position: absolute;
+    top: -20px;
+    height: 38px;
+    width: 38px;
+    background-color: #5a90ed;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%) rotate(45deg);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.boxcontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.boxcontent img {
+    width: 60px;
+    height: 60px;
+}
+
+.boxcontent p{
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0;
+    text-transform: uppercase;
+    color: #050e05;
+}
+
+/* ========================= */
+/* 📱 Responsive Adjustments */
+/* ========================= */
+
+/* For tablets and small laptops (≤ 992px) */
+@media (max-width: 992px) {
+  .tank {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 30px;
+  }
+
+  .boxs {
+    width: 45%;
+    margin-bottom: 40px;
+  }
+
+  .tank::before {
+    display: none; /* Hide horizontal dashed line for smaller screens */
+  }
+
+  .circle,
+  .triangle {
+    top: -25px;
+  }
+
+  .boxcontent img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .boxcontent p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tank {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .boxs {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+
+  .tank::before {
+    display: none;
+  }
+
+  .circle {
+    top: -30px;
+  }
+
+  .triangle {
+    top: -15px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .boxcontent img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .boxcontent p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .whychoose h2 {
+    font-size: 24px;
+  }
+}

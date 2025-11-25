@@ -1,0 +1,118 @@
+/* 🌟 HEADER BASE STYLE */
+.headers {
+  background: linear-gradient(90deg, #f0f1f4df 0%, #84b3faee 100%);
+  /* background-color: #84b3faee; */
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  /* transition: background 0.3s ease, box-shadow 0.3s ease; */
+}
+
+/* 👇 NAV LINKS */
+.headers ul li a {
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: #0b124b;
+  position: relative;
+  padding: 5px 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* ✨ Hover effect — elegant underline slide + color shift */
+.headers ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+.headers ul li a:hover {
+  color: #f00808;
+  transform: translateY(-3px);
+}
+
+.headers ul li a:hover::after {
+  width: 100%;
+  background-color: #de3cba;
+}
+
+.headers img {
+  width: 150px;
+  height: 90px;
+  transition: transform 0.3s ease;
+}
+
+.headers img:hover {
+  transform: scale(1.05);
+}
+
+/* 🧭 Sticky shadow on scroll */
+/* .headers.scrolled {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+} */
+
+/* 📱 Tablet Responsive (≤ 992px) */
+@media (max-width: 992px) {
+  .headers ul {
+    text-align: center;
+  }
+
+  .headers ul li {
+    margin-bottom: 10px;
+  }
+
+  .headers ul li a {
+    font-size: 16px;
+    letter-spacing: 0.4px;
+  }
+
+  .headers img {
+    width: 120px;
+  }
+}
+
+/* 📱 Mobile (≤ 576px) */
+@media (max-width: 576px) {
+  .headers {
+    padding: 10px 0;
+    background: linear-gradient(90deg, #ffffff 0%, #e7f2ff 100%);
+  }
+
+  .headers ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .headers ul li a {
+    display: block;
+    font-size: 15px;
+    padding: 8px 0;
+    color: #0b124b;
+  }
+
+  .headers ul li a:hover {
+    color: #0066cc;
+  }
+
+  .headers img {
+    width: 100px;
+  }
+
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+
+  .navbar-toggler-icon {
+    background-color: #0b124b;
+    border-radius: 3px;
+  }
+}

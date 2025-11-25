@@ -1,0 +1,69 @@
+.footers {
+    background: linear-gradient(to bottom, #180f7c, #3b82f6);
+    color: white;
+}
+.footers p{
+    font-size: 14px;
+    font-weight:500;
+    letter-spacing: 0.5px;
+}
+
+.footers2{
+    background: linear-gradient(to top, #1d0752, #d3140a);
+    color: white;
+}
+.footers2 p{
+    margin: 0%;
+    
+    font-weight: 500;
+    font-size: medium;
+    letter-spacing: 0.5px;
+}
+
+/* ========================= */
+/* 📱 Responsive Adjustments */
+/* ========================= */
+
+/* For tablets and smaller laptops (≤ 992px) */
+@media (max-width: 992px) {
+  .footers p {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .footers2 p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .footers {
+    padding: 20px 15px;
+  }
+
+  .footers2 {
+    padding: 15px 10px;
+  }
+}
+
+/* For mobile devices (≤ 576px) */
+@media (max-width: 576px) {
+  .footers {
+    padding: 15px 10px;
+    text-align: center;
+  }
+
+  .footers2 {
+    padding: 10px 8px;
+    text-align: center;
+  }
+
+  .footers p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .footers2 p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}

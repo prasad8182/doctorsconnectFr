@@ -1,0 +1,768 @@
+.home {
+    background: linear-gradient(to bottom, rgba(8, 8, 15, 0.237), rgba(0, 76, 145, 0.6)),
+        url('./surgiconnectbanner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.home h1 {
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(4, 4, 38);
+    font-weight: bolder;
+    font-display: block;
+    text-align: center;
+}
+
+/* ========================= */
+/* 📱 Responsive Adjustments */
+/* ========================= */
+
+/* For tablets (≤ 992px) */
+@media (max-width: 992px) {
+  .home {
+    height: 450px;
+    padding: 20px;
+  }
+
+  .home h1 {
+    font-size: 28px;
+    padding: 8px 15px;
+  }
+}
+
+/* For mobile devices (≤ 768px) */
+@media (max-width: 768px) {
+  .home {
+    height: 400px;
+    background-position: top;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .home h1 {
+    font-size: 24px;
+    line-height: 1.4;
+    padding: 8px 12px;
+  }
+}
+
+/* For very small screens (≤ 480px) */
+@media (max-width: 480px) {
+  .home {
+    height: 350px;
+    padding: 10px;
+  }
+
+  .home h1 {
+    font-size: 20px;
+    padding: 6px 10px;
+  }
+}
+
+
+.centerParagraph {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.timelineContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin: 50px auto;
+}
+
+.timelineContainer::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    width: 90%;
+    height: 3px;
+    background-color: #f2c7d5;
+    z-index: 0;
+}
+
+.stepCards {
+    background-color: rgb(169, 212, 219);
+    text-align: center;
+    padding: 20px;
+    width: 20%;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(12, 5, 5, 0.05);
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f7c3d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px auto;
+  font-weight: bold;
+  color: white;
+}
+
+/* Book Appointment Data */
+
+/* === MAIN BOOKING SECTION === */
+.bookhead {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #89f7fe,#ef9444, #66a6ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  padding: 60px 20px;
+  color: #003366;
+}
+
+/* === HEADER === */
+.bookhead h1 {
+  text-align: center;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+/* === FORM CONTAINER === */
+.bookhead form {
+  background: linear-gradient(145deg, #ffffff, #f5f7fa);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+}
+
+.bookhead form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* === INPUTS === */
+.bookhead input[type="text"],
+.bookhead input[type="email"],
+.bookhead input[type="number"],
+.bookhead textarea,
+.bookhead input[list] {
+  border: px solid #dce3f0;
+  border-radius: 10px;
+  padding: 12px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #333;
+  font-size: 1rem;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.bookhead input:focus,
+.bookhead textarea:focus {
+  border-color: #66a6ff;
+  box-shadow: 0 0 10px rgba(102, 166, 255, 0.4);
+  outline: none;
+}
+
+/* === TEXTAREA === */
+.bookhead textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+/* === BUTTON STYLES === */
+.bookButton {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bookButton input[type="submit"] {
+  background: linear-gradient(135deg, #00b09b, #96c93d);
+  border: none;
+  padding: 12px 30px;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 176, 155, 0.4);
+}
+
+.bookButton input[type="submit"]:hover {
+  background: linear-gradient(135deg, #00997f, #82b931);
+  transform: scale(1.03);
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 992px) {
+  .bookhead form {
+    width: 100%;
+    padding: 25px 20px;
+  }
+
+  .bookhead h1 {
+    font-size: 1.8rem;
+  }
+
+  .bookButton {
+    justify-content: center;
+  }
+
+  .bookButton input[type="submit"] {
+    width: 100%;
+  }
+}
+
+/* === SMALL DETAILS === */
+::placeholder {
+  color: #999;
+  opacity: 0.8;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+
+/* Contact US . com */
+.contactUs {
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 50px 0px;  
+  color: rgb(4, 4, 42);
+}
+
+.contactUs form {
+  padding: 20px;
+  background-color: beige;
+  border-radius: 10px;
+}
+
+/* Book button container */
+.bookButton {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Button styling */
+.bookButton button {
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(14, 211, 218);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contactUs button:hover {
+  background-color: rgb(10, 190, 200);
+  transform: scale(1.03);
+}
+.contactinfo{
+  padding: 30px 0;
+  font-style: normal;
+  font-family: 'Times New Roman', Times, serif;
+}
+.contactform{
+  padding: 20px 30px;
+}
+
+.treatmentsSection {
+  padding: 40px 0;
+  background: linear-gradient(120deg, #c9d6ff, #f3e448, #fbd3e9);
+}
+
+/* === MAIN ROW === */
+.treatmentsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* === CARD STYLING === */
+.treatCard {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 calc(25% - 20px);
+  max-width: 300px;
+}
+
+.treatCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* === INNER LAYOUT === */
+.treatInner {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* === IMAGE === */
+.treatImg img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+/* === TEXT === */
+.treatName h5 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #0b0315;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* === RESPONSIVE DESIGN === */
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+  .treatCard {
+    flex: 1 1 calc(45% - 20px);
+    max-width: 100%;
+  }
+
+  .treatImg img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .treatName h5 {
+    font-size: 1rem;
+  }
+}
+
+/* Mobiles (max-width: 576px) */
+@media (max-width: 576px) {
+  .treatmentsSection {
+    padding: 25px 10px;
+  }
+
+  .treatmentsRow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .treatCard {
+    flex: 1 1 100%;
+    max-width: 90%;
+  }
+
+  .treatInner {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .treatImg img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .treatName h5 {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* ---------- Locations Section Styling ---------- */
+
+.locationSection {
+  background: linear-gradient(135deg, #f8f9fa, #e8f0fe);
+  min-height: 100vh;
+  padding: 60px 0;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d6efd;
+  letter-spacing: 0.5px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 10px;
+  background-color: #0d6efd;
+  margin: 12px auto 0;
+  border-radius: 10px;
+}
+
+/* ---------- Location Card ---------- */
+.locationCard {
+  background: linear-gradient(155deg, #09a2f5, #0dffbe);
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+}
+
+.locationCard:hover {
+  background: linear-gradient(145deg, #dfe4ec, #e8cad5);
+  /* transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); */
+}
+
+.locationName {
+  font-size: 1.4rem;
+  color: #343a40;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.treatmentName {
+  color: #0d6efd;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+}
+
+/* ---------- RESPONSIVENESS ---------- */
+
+/* Tablets (768px and below) */
+@media (max-width: 992px) {
+  .locationSection {
+    padding: 40px 0;
+  }
+
+  .title {
+    font-size: 1.7rem;
+    margin-bottom: 30px;
+  }
+
+  .locationCard {
+    padding: 25px;
+    border-radius: 18px;
+  }
+
+  .locationName {
+    font-size: 1.25rem;
+  }
+}
+
+/* Mobiles (576px and below) */
+@media (max-width: 576px) {
+  .title {
+    font-size: 1.5rem;
+    letter-spacing: 0.3px;
+  }
+
+  .locationCard {
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  .locationName {
+    font-size: 1.1rem;
+  }
+
+  .treatmentName {
+    font-size: 0.9rem;
+  }
+}
+
+.doctorMain {
+  background: #f8f9fa;
+  min-height: 100vh;
+  padding: 50px 0;
+}
+
+.doctorSection {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  position: relative;
+  text-align: center;
+}
+
+.heading::after {
+  content: "";
+  width: 120px;
+  height: 10px;
+  display: block;
+  margin: 10px auto 0;
+  background: #007bff;
+  border-radius: 0% 0% 100% 100%; /* curve at the bottom */
+}
+
+
+.doctorCard {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px 20px;
+  transition: all 0.3s ease;
+  height: 100%;
+  text-align: center;
+}
+
+.doctorCard:hover {
+  /* transform: translateY(-8px); */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cardHeader h4 {
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.cardHeader .special {
+  color: #555;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.cardBody p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.bookBtn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.bookBtn:hover {
+  background: #051a49;
+  
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------------
+   RESPONSIVE DESIGN
+------------------------- */
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+  .heading {
+    font-size: 1.75rem;
+  }
+
+  .doctorCard {
+    padding: 20px 15px;
+  }
+
+  .cardHeader h4 {
+    font-size: 1.1rem;
+  }
+
+  .cardBody p {
+    font-size: 0.9rem;
+  }
+
+  .bookBtn {
+    padding: 9px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .doctorMain {
+    padding: 30px 0;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .doctorCard {
+    margin-bottom: 20px;
+  }
+
+  .cardHeader h4 {
+    font-size: 1.05rem;
+  }
+
+  .cardBody p {
+    font-size: 0.88rem;
+  }
+
+  .bookBtn {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px 0;
+  }
+}
+
+/* Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.3rem;
+  }
+
+  .doctorCard {
+    padding: 18px 12px;
+    border-radius: 10px;
+  }
+
+  .cardHeader h4 {
+    font-size: 1rem;
+  }
+
+  .bookBtn {
+    padding: 9px 0;
+    font-size: 0.85rem;
+  }
+}
+
+
+/* 🌈 Overall Section */
+.hospitalMain {
+  background: linear-gradient(to top, #f8fbfc46 0%, #5091e6 100%);
+  min-height: 100vh;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.highlight {
+  color: #f5401b;
+}
+
+/* 🩺 Hospital Card */
+.hospitalCard {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 60, 120, 0.1);
+  transition: transform 0.8s ease, box-shadow 0.6s ease;
+}
+
+.hospitalCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(121, 7, 107, 0.2);
+}
+
+/* 🖼️ Image Wrapper with Overlay */
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  border-radius: 18px 18px 0 0;
+}
+
+/* Hover Zoom Effect */
+.hospitalCard:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
+
+/* 💡 Overlay with Hospital Name */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 68, 150, 0.8) 100%);
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.hospitalCard:hover .overlay {
+  opacity: 1;
+}
+
+/* 🏥 Hospital Name Text */
+.hospitalName {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+/* 🧍 Responsive Design */
+@media (max-width: 768px) {
+  .imageWrapper img {
+    height: 180px;
+  }
+
+  .hospitalName {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hospitalMain {
+    padding: 20px 0;
+  }
+  .hospitalCard {
+    border-radius: 12px;
+  }
+  .imageWrapper img {
+    height: 150px;
+  }
+}

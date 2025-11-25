@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
 import './App.css';
-
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
+import Routings from './Routings';
+import { useLocation } from 'react-router-dom';
+import { createContext, useState } from 'react';
+export const store= createContext()
 function App() {
+
+  const [token , setToken]=useState('')
+
+  const location = useLocation()
+
+  const isLocation = location.pathname.startsWith('/admindashboard')
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <store.Provider value={[token,setToken]}>
+      {!isLocation && <Header />}
+      <Routings />
+      {!isLocation && <Footer />}
+    </store.Provider>
   );
 }
 

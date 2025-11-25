@@ -1,0 +1,111 @@
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 40px;
+}
+
+/* Dotted line across */
+.steps-container::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 5%;
+  right: 5%;
+  border-top: 1px dashed #270c90;
+  z-index: 1;
+}
+
+/* Step box styling */
+.step-box {
+  position: relative;
+  background: linear-gradient(to bottom, #5a90ed, #ccd5e9);
+  color: white;
+  width: 22%;
+  padding: 40px 20px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Pink circle */
+.circle {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: #955eed;
+  border-radius: 50%;
+  border: 1px solid #14092f;
+  z-index: 3;
+}
+
+/* White triangle */
+.triangle {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 16px;
+  height: 16px;
+  background: #efebeb;
+  z-index: 2;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Step number */
+.step-box h2 {
+  margin: 0 0 10px;
+  font-size: 32px;
+  color: white;
+  font-weight: 700;
+}
+
+/* Step text */
+.step-box p {
+  color: #1c0b34;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .steps-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .steps-container::before {
+    top: auto;
+    left: 50%;
+    height: 90%;
+    width: 1px;
+    border-top: none;
+    border-left: 1px dashed #0b5b6b;
+  }
+
+  .step-box {
+    width: 80%;
+    margin-bottom: 40px;
+  }
+
+  .circle {
+    top: -25px;
+  }
+
+  .triangle {
+    top: -3;
+  }
+}
